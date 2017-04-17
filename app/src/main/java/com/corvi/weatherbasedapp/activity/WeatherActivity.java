@@ -97,8 +97,6 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
             } else {
                 location = locationCache;
             }
-        } else {
-            location = preferences.getString(getString(R.string.pref_manual_location), null);
         }
 
         if (location != null) {

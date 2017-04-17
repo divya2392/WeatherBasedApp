@@ -30,8 +30,6 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     private SharedPreferences preferences;
 
     private SwitchPreference geolocationEnabledPreference;
-    private EditTextPreference manualLocationPreference;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,9 +38,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
         geolocationEnabledPreference = (SwitchPreference) findPreference(getString(R.string.pref_geolocation_enabled));
-        manualLocationPreference = (EditTextPreference) findPreference(getString(R.string.pref_manual_location));
 
-        bindPreferenceSummaryToValue(manualLocationPreference);
         bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_temperature_unit)));
 
         PreferenceManager.getDefaultSharedPreferences(getActivity()).registerOnSharedPreferenceChangeListener(this);
@@ -70,11 +66,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
-        if (geolocationEnabledPreference.isChecked()) {
-            manualLocationPreference.setEnabled(false);
-        } else {
-            manualLocationPreference.setEnabled(true);
-        }
+
     }
 
     private void bindPreferenceSummaryToValue(Preference preference) {
