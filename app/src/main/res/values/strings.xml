@@ -3,6 +3,7 @@
     <string name="temperature">Temperature</string>
     <string name="condition">Condition</string>
     <string name="location">Location</string>
+    <string name="powered_by_yahoo">powered by Yahoo!</string>
     <string name="condition_icon">Condition Icon</string>
     <string name="loading">Loading&#8230;</string>
     <string name="temperature_output">%1$d&#176;%2$s</string>
@@ -14,4 +15,7 @@
     <string name="day">Day</string>
     <string name="high">High</string>
     <string name="low">Low</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
