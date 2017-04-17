@@ -156,6 +156,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
         return true;
+        //option menu
     }
 
     private void startSettingsActivity() {
